@@ -1,0 +1,7 @@
+#!/bin/bash
+
+lxsession &
+picom -CGb --backend glx --no-fading-openclose --no-fading-destroyed-argb &
+xwallpaper --zoom ~/.config/wallpaper/wall\ paper.jpg &
+dunst
+
