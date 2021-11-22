@@ -123,11 +123,16 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_q,      			quit,           	{0} },
 
 	/* Media manipulation */
-	{ 0,                       	XF86XK_AudioLowerVolume,	spawn, 			SHCMD("pamixer -d 5") },
-	{ 0,                       	XF86XK_AudioMute,		spawn, 			SHCMD("pamixer --toggle-mute") },
-	{ 0,                       	XF86XK_AudioRaiseVolume,	spawn, 			SHCMD("pamixer -i 5") },
-	{ 0,                       	XF86XK_MonBrightnessUp,		spawn, 			SHCMD("light -A 5 && notify-send \"Brightness: $(light -G)%\"") },
-	{ 0,                            XF86XK_MonBrightnessDown,	spawn, 			SHCMD("light -U 5 && notify-send \"Brightness: $(light -G)%\"") },
+	{ 0,                       	XF86XK_AudioLowerVolume,	spawn, 			SHCMD("/usr/bin/pamixer -d 5") },
+	{ 0,                       	XF86XK_AudioMute,		spawn, 			SHCMD("/usr/bin/pamixer --toggle-mute") },
+	{ 0,                       	XF86XK_AudioRaiseVolume,	spawn, 			SHCMD("/usr/bin/pamixer -i 5") },
+	{ 0,                       	XF86XK_MonBrightnessUp,		spawn, 			SHCMD("/usr/bin/light -A 5 && notify-send \"Brightness: $(light -G)%\"") },
+	{ 0,                            XF86XK_MonBrightnessDown,	spawn, 			SHCMD("/usr/bin/light -U 5 && notify-send \"Brightness: $(light -G)%\"") },
+	{ 0,				XF86XK_AudioPlay,		spawn,			SHCMD("/usr/bin/playerctl play-pause") },
+	{ 0,				XF86XK_AudioNext,		spawn,			SHCMD("/usr/bin/playerctl next") },
+	{ 0,				XF86XK_AudioPrev,		spawn,			SHCMD("/usr/bin/playerctl previous") },
+	{ MODKEY|Mod1Mask,		XK_period,			spawn,			SHCMD("/usr/bin/playerctl next") },
+	{ MODKEY|Mod1Mask,		XK_comma,			spawn,			SHCMD("/usr/bin/playerctl previous") },
 
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
