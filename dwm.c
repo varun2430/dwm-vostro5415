@@ -1416,8 +1416,8 @@ run(void)
 
 void
 runautostart(void) {
-	system("cd ~/.config/dwm-vostro5415; ./autostart_blocking.sh");
-	system("cd ~/.config/dwm-vostro5415; ./autostart.sh &");
+	system("cd $HOME/.config/suckless/dwm-vostro5415; ./autostart_blocking.sh");
+	system("cd $HOME/.config/suckless/dwm-vostro5415; ./autostart.sh &");
 }
 
 void
