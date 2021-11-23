@@ -18,7 +18,7 @@ static const char col_gray1[]       = "#000000";	/* background color of bar */
 static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#bbbbbb";
 static const char col_gray4[]       = "#eeeeee";
-static const char col_cyan[]        = "#464646";	/* border color focused windows and tags */
+static const char col_cyan[]        = "#3c3c3c";	/* border color focused windows and tags */
 static const char *colors[][3]      = {
 	/*               	fg		bg		border   */
 	[SchemeNorm]	=	{ col_gray3,	col_gray1,	col_gray2 },
